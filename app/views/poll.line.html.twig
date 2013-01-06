@@ -1,0 +1,10 @@
+{% macro line(id = '-', name = '-', link = '-', is_successful = 0, start_date = 'now', end_date = 'now') %}
+    <tr>
+        <td>{{ id }}</td>
+        <td>{{ name }}</td>
+        <td><a href="{{ link }}" title="{{ name }} link">{{ link }}</a></td>
+        <td>{{ is_successful }}</td>
+        <td>{{ start_date|date('d m Y') }}</td>
+        <td>{{ end_date|date('d m Y') }}</td>
+    </tr>
+{% endmacro %}

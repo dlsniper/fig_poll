@@ -1,7 +1,20 @@
 {
+    "name": "PHP-FIG Poll",
+    "description": "A simple poll system for PHP-FIG",
     "require": {
         "silex/silex": "1.*",
-        "dsyph3r/github-api3-php": "dev-master"
+        "twig/twig": ">=1.8,<2.0-dev",
+        "twig/extensions": "1.0.*",
+        "doctrine/dbal": ">=2.2.3,<2.4-dev"
     },
-    "minimum-stability": "dev"
+
+    "minimum-stability": "dev",
+
+    "config": {
+        "bin-dir": "bin"
+    },
+
+    "scripts": {
+        "post-install-cmd": "bin/create.db.php"
+    }
 }

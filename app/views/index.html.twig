@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% import 'poll.line.html.twig' as pollLine %}
+
+{% block title -%}
+    Poll list
+{%- endblock %}
+
+{% block body %}
+
+    <table>
+        <tr>
+            <th>Poll ID</th>
+            <th>Name</th>
+            <th>Link</th>
+            <th>Passed vote</th>
+            <th>Start Date</th>
+            <th>End date</th>
+        </tr>
+        {% for line in pollLines %}
+            {{ pollLine.line(line.id, line.name, line.link, line.is_successful, line.start_date, line.end_date) }}
+        {% endfor %}
+    </table>
+
+{% endblock %}

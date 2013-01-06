@@ -1,6 +1,7 @@
 {
     "require": {
-        "silex/silex": "1.*"
+        "silex/silex": "1.*",
+        "dsyph3r/github-api3-php": "dev-master"
     },
     "minimum-stability": "dev"
 }
